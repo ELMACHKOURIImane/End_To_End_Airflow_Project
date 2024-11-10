@@ -14,7 +14,13 @@ USER airflow
 # Install PySpark and Airflow provider for Spark
 RUN pip install apache-airflow-providers-mongo
 RUN pip install pandas
-RUN pip install apache-airflow-providers-google google-cloud-bigquery
+RUN pip install apache-airflow-providers-google google-cloud-bigquery google-cloud-storage
+
+# Copy the Google Cloud service account key into the container
+COPY buoyant-genre-441010-b2-dcd263088773.json /opt/airflow/keyfile.json
+
+# Set the environment variable for the Google Cloud connection
+ENV GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/keyfile.json
 
 # Set the default command to start the airflow webserver
 CMD ["bash"]

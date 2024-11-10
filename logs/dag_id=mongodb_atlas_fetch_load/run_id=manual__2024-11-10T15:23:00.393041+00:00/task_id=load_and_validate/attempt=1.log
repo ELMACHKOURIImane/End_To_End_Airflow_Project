@@ -1,0 +1,33 @@
+[2024-11-10T15:23:18.057+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-10T15:23:18.123+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load.load_and_validate manual__2024-11-10T15:23:00.393041+00:00 [queued]>
+[2024-11-10T15:23:18.145+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load.load_and_validate manual__2024-11-10T15:23:00.393041+00:00 [queued]>
+[2024-11-10T15:23:18.146+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-10T15:23:18.178+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_and_validate> on 2024-11-10 15:23:00.393041+00:00
+[2024-11-10T15:23:18.196+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=782) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-10T15:23:18.199+0000] {standard_task_runner.py:72} INFO - Started process 784 to run task
+[2024-11-10T15:23:18.205+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_load', 'load_and_validate', 'manual__2024-11-10T15:23:00.393041+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmp_vszi4kg']
+[2024-11-10T15:23:18.209+0000] {standard_task_runner.py:105} INFO - Job 145: Subtask load_and_validate
+[2024-11-10T15:23:18.397+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_load.load_and_validate manual__2024-11-10T15:23:00.393041+00:00 [running]> on host e9f90922e3c1
+[2024-11-10T15:23:18.729+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_load' AIRFLOW_CTX_TASK_ID='load_and_validate' AIRFLOW_CTX_EXECUTION_DATE='2024-11-10T15:23:00.393041+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-10T15:23:00.393041+00:00'
+[2024-11-10T15:23:18.733+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-10T15:23:18.733+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-10T15:23:18.734+0000] {logging_mixin.py:190} INFO - Current task name:load_and_validate state:running start_date:2024-11-10 15:23:18.124342+00:00
+[2024-11-10T15:23:18.735+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load and current dag run status:running
+[2024-11-10T15:23:18.736+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-10T15:23:18.763+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2024-11-10T15:23:23.711+0000] {connection.py:277} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2024-11-10T15:23:23.715+0000] {base.py:84} INFO - Retrieving connection 'google_cloud_default'
+[2024-11-10T15:23:25.024+0000] {gcs.py:594} INFO - File /tmp/mongo_data.json uploaded to raw_data/api_combined_data.json in ***_bucket_name bucket
+[2024-11-10T15:23:25.026+0000] {hook.py:208} WARNING - Data lineage tracking is disabled. Register a hook lineage reader to start tracking hook lineage.
+[2024-11-10T15:23:25.027+0000] {python.py:240} INFO - Done. Returned value was: gs://***_bucket_name/raw_data/api_combined_data.json
+[2024-11-10T15:23:25.080+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-10T15:23:25.081+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=mongodb_atlas_fetch_load, task_id=load_and_validate, run_id=manual__2024-11-10T15:23:00.393041+00:00, execution_date=20241110T152300, start_date=20241110T152318, end_date=20241110T152325
+[2024-11-10T15:23:25.106+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-10T15:23:25.108+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-10T15:23:25.111+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load queued_at:2024-11-10 15:23:00.415141+00:00
+[2024-11-10T15:23:25.114+0000] {logging_mixin.py:190} INFO - Task hostname:e9f90922e3c1 operator:PythonOperator
+[2024-11-10T15:23:25.161+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-10T15:23:25.220+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-10T15:23:25.227+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

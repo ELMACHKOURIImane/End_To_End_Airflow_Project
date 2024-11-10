@@ -1,0 +1,29 @@
+[2024-11-10T14:35:07.888+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-10T14:35:07.919+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load.fetch_data manual__2024-11-10T14:34:54.786419+00:00 [queued]>
+[2024-11-10T14:35:07.934+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load.fetch_data manual__2024-11-10T14:34:54.786419+00:00 [queued]>
+[2024-11-10T14:35:07.935+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-10T14:35:07.960+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data> on 2024-11-10 14:34:54.786419+00:00
+[2024-11-10T14:35:07.975+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=92) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-10T14:35:07.978+0000] {standard_task_runner.py:72} INFO - Started process 94 to run task
+[2024-11-10T14:35:07.980+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_load', 'fetch_data', 'manual__2024-11-10T14:34:54.786419+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmpx_xbdwww']
+[2024-11-10T14:35:07.983+0000] {standard_task_runner.py:105} INFO - Job 131: Subtask fetch_data
+[2024-11-10T14:35:08.068+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_load.fetch_data manual__2024-11-10T14:34:54.786419+00:00 [running]> on host e9f90922e3c1
+[2024-11-10T14:35:08.254+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_load' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-10T14:34:54.786419+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-10T14:34:54.786419+00:00'
+[2024-11-10T14:35:08.257+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-10T14:35:08.258+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-10T14:35:08.258+0000] {logging_mixin.py:190} INFO - Current task name:fetch_data state:running start_date:2024-11-10 14:35:07.920375+00:00
+[2024-11-10T14:35:08.259+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load and current dag run status:running
+[2024-11-10T14:35:08.259+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-10T14:35:08.283+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2024-11-10T14:35:41.350+0000] {python.py:240} INFO - Done. Returned value was: /tmp/mongo_data.json
+[2024-11-10T14:35:41.403+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-10T14:35:41.404+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=mongodb_atlas_fetch_load, task_id=fetch_data, run_id=manual__2024-11-10T14:34:54.786419+00:00, execution_date=20241110T143454, start_date=20241110T143507, end_date=20241110T143541
+[2024-11-10T14:35:41.432+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-10T14:35:41.433+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-10T14:35:41.434+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load queued_at:2024-11-10 14:34:54.817832+00:00
+[2024-11-10T14:35:41.434+0000] {logging_mixin.py:190} INFO - Task hostname:e9f90922e3c1 operator:PythonOperator
+[2024-11-10T14:35:41.493+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-10T14:35:41.614+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-10T14:35:41.618+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
