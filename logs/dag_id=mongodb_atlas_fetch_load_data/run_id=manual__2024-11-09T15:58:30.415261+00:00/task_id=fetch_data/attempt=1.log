@@ -1,0 +1,352 @@
+[2024-11-09T15:58:41.768+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-09T15:58:41.888+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load_data.fetch_data manual__2024-11-09T15:58:30.415261+00:00 [queued]>
+[2024-11-09T15:58:41.969+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load_data.fetch_data manual__2024-11-09T15:58:30.415261+00:00 [queued]>
+[2024-11-09T15:58:41.972+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-09T15:58:42.058+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data> on 2024-11-09 15:58:30.415261+00:00
+[2024-11-09T15:58:42.133+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1079) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-09T15:58:42.160+0000] {standard_task_runner.py:72} INFO - Started process 1088 to run task
+[2024-11-09T15:58:42.171+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_load_data', 'fetch_data', 'manual__2024-11-09T15:58:30.415261+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmp8kv7tv9m']
+[2024-11-09T15:58:42.187+0000] {standard_task_runner.py:105} INFO - Job 55: Subtask fetch_data
+[2024-11-09T15:58:42.543+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_load_data.fetch_data manual__2024-11-09T15:58:30.415261+00:00 [running]> on host 9d4f5fb4a641
+[2024-11-09T15:58:44.018+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_load_data' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-09T15:58:30.415261+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-09T15:58:30.415261+00:00'
+[2024-11-09T15:58:44.020+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-09T15:58:44.023+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-09T15:58:44.028+0000] {logging_mixin.py:190} INFO - Current task name:fetch_data state:running start_date:2024-11-09 15:58:41.890622+00:00
+[2024-11-09T15:58:44.030+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load_data and current dag run status:running
+[2024-11-09T15:58:44.033+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-09T15:58:44.038+0000] {logging_mixin.py:190} INFO - Fetching data from MongoDB...
+[2024-11-09T15:58:44.081+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2024-11-09T15:59:31.620+0000] {logging_mixin.py:190} INFO -                         _id  \
+0  672f6a95c54617db64d7ae20   
+1  672f6a9bc54617db64d7ae21   
+2  672f6b610f70e73e0ad27221   
+3  672f6b670f70e73e0ad27222   
+4  672f6b8f0f70e73e0ad27223   
+
+                                             journal indexation  \
+0            Published in: IEEE Access ( Volume: 11)       IEEE   
+1            Published in: IEEE Access ( Volume: 12)       IEEE   
+2            Published in: IEEE Access ( Volume: 11)       IEEE   
+3            Published in: IEEE Access ( Volume: 12)       IEEE   
+4  Published in: IEEE Transactions on Software En...       IEEE   
+
+       publication                               doi  \
+0  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+1  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+2  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+3  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+4  Publisher: IEEE     DOI: 10.1109/TSE.2021.3102982   
+
+                                               titre  \
+0  A Systematic Framework for Addressing Critical...   
+1  Prioritizing DevOps Implementation Guidelines ...   
+2  A Systematic Framework for Addressing Critical...   
+3  Prioritizing DevOps Implementation Guidelines ...   
+4  DevOps Team Structures: Characterization and I...   
+
+                                          chercheurs  \
+0  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+1  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+2  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+3  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+4  Daniel López-Fernández; Jessica Díaz; Javier G...   
+
+                                        laboratoires  \
+0  Department of Computing, Riphah International ...   
+1                                     Non disponible   
+2  Department of Computing, Riphah International ...   
+3                                                      
+4                                                      
+
+                                            abstract  \
+0  DevOps is the bundle of applications and cultu...   
+1  The DevOps paradigm is increasingly being adop...   
+2  DevOps is the bundle of applications and cultu...   
+3  The DevOps paradigm is increasingly being adop...   
+4  Context : DevOps can be defined as a cultural ...   
+
+                                                ISSN  \
+0  {'Print ISSN': 'Non disponible', 'Electronic I...   
+1  {'Print ISSN': 'Non disponible', 'Electronic I...   
+2  {'Print ISSN': 'Non disponible', 'Electronic I...   
+3  {'Print ISSN': 'Non disponible', 'Electronic I...   
+4  {'Print ISSN': '0098-5589', 'Electronic ISSN':...   
+
+                                            quartile      pays  
+0                          Journal pas indexé Scopus  Pakistan  
+1                          Journal pas indexé Scopus      None  
+2                          Journal pas indexé Scopus  Pakistan  
+3                          Journal pas indexé Scopus      None  
+4  [{'année': '1999', 'quartil': 'Q1'}, {'année':...      None  
+[2024-11-09T15:59:31.622+0000] {python.py:240} INFO - Done. Returned value was: {'Articles':                           _id  \
+0    672f6a95c54617db64d7ae20   
+1    672f6a9bc54617db64d7ae21   
+2    672f6b610f70e73e0ad27221   
+3    672f6b670f70e73e0ad27222   
+4    672f6b8f0f70e73e0ad27223   
+..                        ...   
+269  672f83ccf1f726ca2e65b637   
+270  672f83eef1f726ca2e65b638   
+271  672f8406f1f726ca2e65b639   
+272  672f8428f1f726ca2e65b63a   
+273  672f84a5f1f726ca2e65b63b   
+
+                                               journal indexation  \
+0              Published in: IEEE Access ( Volume: 11)       IEEE   
+1              Published in: IEEE Access ( Volume: 12)       IEEE   
+2              Published in: IEEE Access ( Volume: 11)       IEEE   
+3              Published in: IEEE Access ( Volume: 12)       IEEE   
+4    Published in: IEEE Transactions on Software En...       IEEE   
+..                                                 ...        ...   
+269  Published in: IEEE Communications Surveys & Tu...       IEEE   
+270  Published in: IEEE Engineering Management Revi...       IEEE   
+271  Published in: IEEE Transactions on Cloud Compu...       IEEE   
+272  Published in: IEEE Transactions on Circuits an...       IEEE   
+273            Published in: IEEE Access ( Volume: 11)       IEEE   
+
+         publication                               doi  \
+0    Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+1    Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+2    Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+3    Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+4    Publisher: IEEE     DOI: 10.1109/TSE.2021.3102982   
+..               ...                               ...   
+269  Publisher: IEEE   DOI: 10.1109/COMST.2023.3302474   
+270  Publisher: IEEE     DOI: 10.1109/EMR.2024.3353338   
+271  Publisher: IEEE     DOI: 10.1109/TCC.2022.3201544   
+272  Publisher: IEEE    DOI: 10.1109/TCSI.2023.3268728   
+273  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3297646   
+
+                                                 titre  \
+0    A Systematic Framework for Addressing Critical...   
+1    Prioritizing DevOps Implementation Guidelines ...   
+2    A Systematic Framework for Addressing Critical...   
+3    Prioritizing DevOps Implementation Guidelines ...   
+4    DevOps Team Structures: Characterization and I...   
+..                                                 ...   
+269  A Survey on Approximate Edge AI for Energy Eff...   
+270  Comparing the Ideation Quality of Humans With ...   
+271  AI-Bazaar: A Cloud-Edge Computing Power Tradin...   
+272  Analog Multiply-Accumulate Cell With Multi-Bit...   
+273  When AI Meets Information Privacy: The Adversa...   
+
+                                            chercheurs  \
+0    Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+1    Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+2    Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+3    Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+4    Daniel López-Fernández; Jessica Díaz; Javier G...   
+..                                                 ...   
+269  Dewant Katare; Diego Perino; Jari Nurmi; Marti...   
+270  Jan Joosten; Volker Bilgram; Alexander Hahn; D...   
+271  Xiaoxu Ren; Chao Qiu; Xiaofei Wang; Zhu Han; K...   
+272  Raphael Nägele; Jakob Finkbeiner; Valentin Sta...   
+273                      Abdul Majeed; Seong Oun Hwang   
+
+                                          laboratoires  \
+0    Department of Computing, Riphah International ...   
+1                                       Non disponible   
+2    Department of Computing, Riphah International ...   
+3                                                        
+4                                                        
+..                                                 ...   
+269                                                      
+270                                                      
+271  College of Intelligence and Computing, Tianjin...   
+272  Institute of Electrical and Optical Communicat...   
+273  Department of Computer Engineering, Gachon Uni...   
+
+                                              abstract  \
+0    DevOps is the bundle of applications and cultu...   
+1    The DevOps paradigm is increasingly being adop...   
+2    DevOps is the bundle of applications and cultu...   
+3    The DevOps paradigm is increasingly being adop...   
+4    Context : DevOps can be defined as a cultural ...   
+..                                                 ...   
+269  Autonomous driving services depends on active ...   
+270  Traditionally, ideating new product innovation...   
+271  Driven by the burgeoning growth of the Interne...   
+272  Mixed-signal AI accelerators offer the possibi...   
+273  Artificial intelligence (AI) is a transformati...   
+
+                                                  ISSN  \
+0    {'Print ISSN': 'Non disponible', 'Electronic I...   
+1    {'Print ISSN': 'Non disponible', 'Electronic I...   
+2    {'Print ISSN': 'Non disponible', 'Electronic I...   
+3    {'Print ISSN': 'Non disponible', 'Electronic I...   
+4    {'Print ISSN': '0098-5589', 'Electronic ISSN':...   
+..                                                 ...   
+269  {'Print ISSN': 'Non disponible', 'Electronic I...   
+270  {'Print ISSN': '0360-8581', 'Electronic ISSN':...   
+271  {'Print ISSN': 'Non disponible', 'Electronic I...   
+272  {'Print ISSN': '1549-8328', 'Electronic ISSN':...   
+273  {'Print ISSN': 'Non disponible', 'Electronic I...   
+
+                                              quartile      pays  
+0                            Journal pas indexé Scopus  Pakistan  
+1                            Journal pas indexé Scopus      None  
+2                            Journal pas indexé Scopus  Pakistan  
+3                            Journal pas indexé Scopus      None  
+4    [{'année': '1999', 'quartil': 'Q1'}, {'année':...      None  
+..                                                 ...       ...  
+269                          Journal pas indexé Scopus      None  
+270  [{'année': '1999', 'quartil': 'Q3'}, {'année':...      None  
+271                          Journal pas indexé Scopus     China  
+272  [{'année': '1999', 'quartil': 'Q1'}, {'année':...   Germany  
+273                            Une erreur est survenue      None  
+
+[274 rows x 12 columns]}
+[2024-11-09T15:59:31.848+0000] {xcom.py:690} ERROR - ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object'). If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2024-11-09T15:59:31.853+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3639, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 249, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 688, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 105, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 92, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 149, in serialize
+    data, serialized_classname, version, is_serialized = _serializers[qn].serialize(o)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 625, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 612, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 606, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 360, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object')
+[2024-11-09T15:59:31.911+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-09T15:59:31.918+0000] {logging_mixin.py:190} INFO - Task start:2024-11-09 15:58:41.890622+00:00 end:2024-11-09 15:59:31.910391+00:00 duration:50.019769
+[2024-11-09T15:59:31.923+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): fetch_data> dag:<DAG: mongodb_atlas_fetch_load_data> dagrun:<DagRun mongodb_atlas_fetch_load_data @ 2024-11-09 15:58:30.415261+00:00: manual__2024-11-09T15:58:30.415261+00:00, state:running, queued_at: 2024-11-09 15:58:30.438983+00:00. externally triggered: True>
+[2024-11-09T15:59:31.924+0000] {logging_mixin.py:190} INFO - Failure caused by ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object')
+[2024-11-09T15:59:31.925+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=mongodb_atlas_fetch_load_data, task_id=fetch_data, run_id=manual__2024-11-09T15:58:30.415261+00:00, execution_date=20241109T155830, start_date=20241109T155841, end_date=20241109T155931
+[2024-11-09T15:59:31.972+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-09T15:59:31.973+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 55 for task fetch_data (("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object'); 1088)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3639, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 249, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 688, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 105, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 92, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 149, in serialize
+    data, serialized_classname, version, is_serialized = _serializers[qn].serialize(o)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 625, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 612, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 606, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 360, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object')
+[2024-11-09T15:59:32.077+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-09T15:59:32.578+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-09T15:59:32.590+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

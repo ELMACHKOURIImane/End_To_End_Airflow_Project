@@ -1,0 +1,85 @@
+[2024-11-09T13:51:23.010+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-09T13:51:23.060+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_data.fetch_data manual__2024-11-09T13:51:13.282878+00:00 [queued]>
+[2024-11-09T13:51:23.080+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_data.fetch_data manual__2024-11-09T13:51:13.282878+00:00 [queued]>
+[2024-11-09T13:51:23.081+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-09T13:51:23.113+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data> on 2024-11-09 13:51:13.282878+00:00
+[2024-11-09T13:51:23.131+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=418) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-09T13:51:23.135+0000] {standard_task_runner.py:72} INFO - Started process 428 to run task
+[2024-11-09T13:51:23.137+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_data', 'fetch_data', 'manual__2024-11-09T13:51:13.282878+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmpiii17mbg']
+[2024-11-09T13:51:23.142+0000] {standard_task_runner.py:105} INFO - Job 52: Subtask fetch_data
+[2024-11-09T13:51:23.278+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_data.fetch_data manual__2024-11-09T13:51:13.282878+00:00 [running]> on host 9d4f5fb4a641
+[2024-11-09T13:51:24.047+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_data' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-09T13:51:13.282878+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-09T13:51:13.282878+00:00'
+[2024-11-09T13:51:24.056+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-09T13:51:24.058+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-09T13:51:24.059+0000] {logging_mixin.py:190} INFO - Current task name:fetch_data state:running start_date:2024-11-09 13:51:23.060951+00:00
+[2024-11-09T13:51:24.059+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_data and current dag run status:running
+[2024-11-09T13:51:24.060+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-09T13:51:24.061+0000] {logging_mixin.py:190} INFO - Hello world! Fetching data from MongoDB...
+[2024-11-09T13:51:24.122+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2024-11-09T13:51:27.151+0000] {logging_mixin.py:190} INFO -                         _id                                  journal  \
+0  672f31891e17ec3a269dc22e  Published in: IEEE Access ( Volume: 11)   
+1  672f3223911cff78ae03550d  Published in: IEEE Access ( Volume: 11)   
+2  672f329c49067b356a34e56f  Published in: IEEE Access ( Volume: 11)   
+3  672f33a794e00f15d188bec8  Published in: IEEE Access ( Volume: 11)   
+4  672f5cfd869b3065697734ec  Published in: IEEE Access ( Volume: 11)   
+
+  indexation      publication                               doi  \
+0       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+1       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+2       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+3       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+4       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+
+                                               titre  \
+0  A Systematic Framework for Addressing Critical...   
+1  A Systematic Framework for Addressing Critical...   
+2  A Systematic Framework for Addressing Critical...   
+3  A Systematic Framework for Addressing Critical...   
+4  A Systematic Framework for Addressing Critical...   
+
+                                          chercheurs  \
+0  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+1  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+2  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+3  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+4  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+
+                                        laboratoires  \
+0                                     Non disponible   
+1                                     Non disponible   
+2                                     Non disponible   
+3  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+4                                     Non disponible   
+
+                                            abstract  \
+0  DevOps is the bundle of applications and cultu...   
+1  DevOps is the bundle of applications and cultu...   
+2  DevOps is the bundle of applications and cultu...   
+3  DevOps is the bundle of applications and cultu...   
+4  DevOps is the bundle of applications and cultu...   
+
+                                                ISSN  \
+0  {'Print ISSN': 'Non disponible', 'Electronic I...   
+1  {'Print ISSN': 'Non disponible', 'Electronic I...   
+2  {'Print ISSN': 'Non disponible', 'Electronic I...   
+3  {'Print ISSN': 'Non disponible', 'Electronic I...   
+4  {'Print ISSN': 'Non disponible', 'Electronic I...   
+
+                    quartile  pays  
+0  Journal pas indexé Scopus  None  
+1  Journal pas indexé Scopus  None  
+2  Journal pas indexé Scopus  None  
+3  Journal pas indexé Scopus  None  
+4  Journal pas indexé Scopus  None  
+[2024-11-09T13:51:27.152+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-09T13:51:27.175+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-09T13:51:27.176+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=mongodb_atlas_fetch_data, task_id=fetch_data, run_id=manual__2024-11-09T13:51:13.282878+00:00, execution_date=20241109T135113, start_date=20241109T135123, end_date=20241109T135127
+[2024-11-09T13:51:27.197+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-09T13:51:27.198+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-09T13:51:27.198+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_data queued_at:2024-11-09 13:51:13.308988+00:00
+[2024-11-09T13:51:27.199+0000] {logging_mixin.py:190} INFO - Task hostname:9d4f5fb4a641 operator:PythonOperator
+[2024-11-09T13:51:27.234+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-09T13:51:27.276+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-09T13:51:27.279+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

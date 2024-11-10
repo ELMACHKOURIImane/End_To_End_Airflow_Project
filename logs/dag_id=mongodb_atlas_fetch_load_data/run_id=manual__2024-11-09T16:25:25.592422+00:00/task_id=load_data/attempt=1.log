@@ -1,0 +1,86 @@
+[2024-11-09T16:25:52.436+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-09T16:25:52.536+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load_data.load_data manual__2024-11-09T16:25:25.592422+00:00 [queued]>
+[2024-11-09T16:25:52.584+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load_data.load_data manual__2024-11-09T16:25:25.592422+00:00 [queued]>
+[2024-11-09T16:25:52.586+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-09T16:25:52.661+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_data> on 2024-11-09 16:25:25.592422+00:00
+[2024-11-09T16:25:52.691+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=263) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-09T16:25:52.701+0000] {standard_task_runner.py:72} INFO - Started process 265 to run task
+[2024-11-09T16:25:52.705+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_load_data', 'load_data', 'manual__2024-11-09T16:25:25.592422+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmpcvszu5d6']
+[2024-11-09T16:25:52.711+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask load_data
+[2024-11-09T16:25:53.061+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_load_data.load_data manual__2024-11-09T16:25:25.592422+00:00 [running]> on host 9c1a8e215aa5
+[2024-11-09T16:25:54.081+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_load_data' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-09T16:25:25.592422+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-09T16:25:25.592422+00:00'
+[2024-11-09T16:25:54.094+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-09T16:25:54.095+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-09T16:25:54.096+0000] {logging_mixin.py:190} INFO - Current task name:load_data state:running start_date:2024-11-09 16:25:52.539702+00:00
+[2024-11-09T16:25:54.101+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load_data and current dag run status:running
+[2024-11-09T16:25:54.102+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-09T16:25:54.103+0000] {logging_mixin.py:190} INFO - Fetching data from MongoDB...
+[2024-11-09T16:25:54.143+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2024-11-09T16:26:10.547+0000] {logging_mixin.py:190} INFO -                                              journal indexation  \
+0            Published in: IEEE Access ( Volume: 11)       IEEE   
+1            Published in: IEEE Access ( Volume: 12)       IEEE   
+2            Published in: IEEE Access ( Volume: 11)       IEEE   
+3            Published in: IEEE Access ( Volume: 12)       IEEE   
+4  Published in: IEEE Transactions on Software En...       IEEE   
+
+       publication                               doi  \
+0  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+1  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+2  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+3  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+4  Publisher: IEEE     DOI: 10.1109/TSE.2021.3102982   
+
+                                               titre  \
+0  A Systematic Framework for Addressing Critical...   
+1  Prioritizing DevOps Implementation Guidelines ...   
+2  A Systematic Framework for Addressing Critical...   
+3  Prioritizing DevOps Implementation Guidelines ...   
+4  DevOps Team Structures: Characterization and I...   
+
+                                          chercheurs  \
+0  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+1  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+2  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+3  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+4  Daniel López-Fernández; Jessica Díaz; Javier G...   
+
+                                        laboratoires  \
+0  Department of Computing, Riphah International ...   
+1                                     Non disponible   
+2  Department of Computing, Riphah International ...   
+3                                                      
+4                                                      
+
+                                            abstract  \
+0  DevOps is the bundle of applications and cultu...   
+1  The DevOps paradigm is increasingly being adop...   
+2  DevOps is the bundle of applications and cultu...   
+3  The DevOps paradigm is increasingly being adop...   
+4  Context : DevOps can be defined as a cultural ...   
+
+                                                ISSN  \
+0  {'Print ISSN': 'Non disponible', 'Electronic I...   
+1  {'Print ISSN': 'Non disponible', 'Electronic I...   
+2  {'Print ISSN': 'Non disponible', 'Electronic I...   
+3  {'Print ISSN': 'Non disponible', 'Electronic I...   
+4  {'Print ISSN': '0098-5589', 'Electronic ISSN':...   
+
+                                            quartile      pays  
+0                          Journal pas indexé Scopus  Pakistan  
+1                          Journal pas indexé Scopus      None  
+2                          Journal pas indexé Scopus  Pakistan  
+3                          Journal pas indexé Scopus      None  
+4  [{'année': '1999', 'quartil': 'Q1'}, {'année':...      None  
+[2024-11-09T16:26:10.564+0000] {logging_mixin.py:190} INFO - Data load error: [Errno 2] No such file or directory: '/home/dell/Desktop/Projects/E***/buoyant-genre-441010-b2-63e7fec64f8d.json'
+[2024-11-09T16:26:10.578+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-09T16:26:10.597+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-09T16:26:10.598+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=mongodb_atlas_fetch_load_data, task_id=load_data, run_id=manual__2024-11-09T16:25:25.592422+00:00, execution_date=20241109T162525, start_date=20241109T162552, end_date=20241109T162610
+[2024-11-09T16:26:10.619+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-09T16:26:10.619+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-09T16:26:10.620+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load_data queued_at:2024-11-09 16:25:25.608498+00:00
+[2024-11-09T16:26:10.620+0000] {logging_mixin.py:190} INFO - Task hostname:9c1a8e215aa5 operator:PythonOperator
+[2024-11-09T16:26:10.666+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-09T16:26:10.701+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-09T16:26:10.705+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

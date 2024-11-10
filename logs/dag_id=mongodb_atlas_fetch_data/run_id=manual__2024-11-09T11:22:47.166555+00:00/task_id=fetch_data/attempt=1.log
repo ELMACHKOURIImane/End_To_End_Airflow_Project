@@ -1,0 +1,136 @@
+[2024-11-09T11:23:00.878+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-09T11:23:00.910+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_data.fetch_data manual__2024-11-09T11:22:47.166555+00:00 [queued]>
+[2024-11-09T11:23:00.928+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_data.fetch_data manual__2024-11-09T11:22:47.166555+00:00 [queued]>
+[2024-11-09T11:23:00.929+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-09T11:23:00.961+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data> on 2024-11-09 11:22:47.166555+00:00
+[2024-11-09T11:23:00.982+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=303) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-09T11:23:00.986+0000] {standard_task_runner.py:72} INFO - Started process 312 to run task
+[2024-11-09T11:23:00.995+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_data', 'fetch_data', 'manual__2024-11-09T11:22:47.166555+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmptg2isp1o']
+[2024-11-09T11:23:00.998+0000] {standard_task_runner.py:105} INFO - Job 37: Subtask fetch_data
+[2024-11-09T11:23:01.126+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_data.fetch_data manual__2024-11-09T11:22:47.166555+00:00 [running]> on host 501997186f25
+[2024-11-09T11:23:01.699+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_data' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-09T11:22:47.166555+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-09T11:22:47.166555+00:00'
+[2024-11-09T11:23:01.709+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-09T11:23:01.711+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-09T11:23:01.712+0000] {logging_mixin.py:190} INFO - Current task name:fetch_data state:running start_date:2024-11-09 11:23:00.911395+00:00
+[2024-11-09T11:23:01.713+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_data and current dag run status:running
+[2024-11-09T11:23:01.716+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-09T11:23:01.792+0000] {base.py:84} INFO - Retrieving connection 'mongo_db'
+[2024-11-09T11:23:01.793+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/et_pipeline.py", line 16, in fetch_data_from_mongo
+    client = hook.get_conn()
+             ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/mongo/hooks/mongo.py", line 202, in get_conn
+    self.client = MongoClient(self.uri, **options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/uri_parser.py", line 529, in parse_uri
+    options.update(split_options(opts, validate, warn, normalize))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/uri_parser.py", line 360, in split_options
+    raise InvalidURI("MongoDB URI options are key=value pairs.") from None
+pymongo.errors.InvalidURI: MongoDB URI options are key=value pairs.
+[2024-11-09T11:23:01.907+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-09T11:23:01.912+0000] {logging_mixin.py:190} INFO - Task start:2024-11-09 11:23:00.911395+00:00 end:2024-11-09 11:23:01.906164+00:00 duration:0.994769
+[2024-11-09T11:23:01.919+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): fetch_data> dag:<DAG: mongodb_atlas_fetch_data> dagrun:<DagRun mongodb_atlas_fetch_data @ 2024-11-09 11:22:47.166555+00:00: manual__2024-11-09T11:22:47.166555+00:00, state:running, queued_at: 2024-11-09 11:22:47.319001+00:00. externally triggered: True>
+[2024-11-09T11:23:01.925+0000] {logging_mixin.py:190} INFO - Failure caused by MongoDB URI options are key=value pairs.
+[2024-11-09T11:23:01.938+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=mongodb_atlas_fetch_data, task_id=fetch_data, run_id=manual__2024-11-09T11:22:47.166555+00:00, execution_date=20241109T112247, start_date=20241109T112300, end_date=20241109T112301
+[2024-11-09T11:23:02.024+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-09T11:23:02.025+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 37 for task fetch_data (MongoDB URI options are key=value pairs.; 312)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/et_pipeline.py", line 16, in fetch_data_from_mongo
+    client = hook.get_conn()
+             ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/mongo/hooks/mongo.py", line 202, in get_conn
+    self.client = MongoClient(self.uri, **options)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 780, in __init__
+    res = uri_parser.parse_uri(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/uri_parser.py", line 529, in parse_uri
+    options.update(split_options(opts, validate, warn, normalize))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pymongo/uri_parser.py", line 360, in split_options
+    raise InvalidURI("MongoDB URI options are key=value pairs.") from None
+pymongo.errors.InvalidURI: MongoDB URI options are key=value pairs.
+[2024-11-09T11:23:02.098+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-09T11:23:02.162+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-09T11:23:02.166+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

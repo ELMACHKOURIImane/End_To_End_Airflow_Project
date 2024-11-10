@@ -1,0 +1,266 @@
+[2024-11-09T14:02:38.010+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-09T14:02:38.079+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load_data.fetch_data manual__2024-11-09T14:02:32.799063+00:00 [queued]>
+[2024-11-09T14:02:38.113+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mongodb_atlas_fetch_load_data.fetch_data manual__2024-11-09T14:02:32.799063+00:00 [queued]>
+[2024-11-09T14:02:38.114+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-11-09T14:02:38.163+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data> on 2024-11-09 14:02:32.799063+00:00
+[2024-11-09T14:02:38.205+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=553) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-09T14:02:38.218+0000] {standard_task_runner.py:72} INFO - Started process 555 to run task
+[2024-11-09T14:02:38.229+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mongodb_atlas_fetch_load_data', 'fetch_data', 'manual__2024-11-09T14:02:32.799063+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/et_pipeline.py', '--cfg-path', '/tmp/tmplcday634']
+[2024-11-09T14:02:38.239+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask fetch_data
+[2024-11-09T14:02:38.389+0000] {task_command.py:467} INFO - Running <TaskInstance: mongodb_atlas_fetch_load_data.fetch_data manual__2024-11-09T14:02:32.799063+00:00 [running]> on host 9d4f5fb4a641
+[2024-11-09T14:02:38.993+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mongodb_atlas_fetch_load_data' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-09T14:02:32.799063+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-09T14:02:32.799063+00:00'
+[2024-11-09T14:02:38.995+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-09T14:02:38.996+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-09T14:02:38.996+0000] {logging_mixin.py:190} INFO - Current task name:fetch_data state:running start_date:2024-11-09 14:02:38.080514+00:00
+[2024-11-09T14:02:38.997+0000] {logging_mixin.py:190} INFO - Dag name:mongodb_atlas_fetch_load_data and current dag run status:running
+[2024-11-09T14:02:38.998+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-09T14:02:39.000+0000] {logging_mixin.py:190} INFO - Fetching data from MongoDB...
+[2024-11-09T14:02:39.032+0000] {base.py:84} INFO - Retrieving connection 'mongo_default'
+[2024-11-09T14:02:42.676+0000] {logging_mixin.py:190} INFO -                         _id                                  journal  \
+0  672f6a95c54617db64d7ae20  Published in: IEEE Access ( Volume: 11)   
+1  672f6a9bc54617db64d7ae21  Published in: IEEE Access ( Volume: 12)   
+2  672f6b610f70e73e0ad27221  Published in: IEEE Access ( Volume: 11)   
+3  672f6b670f70e73e0ad27222  Published in: IEEE Access ( Volume: 12)   
+
+  indexation      publication                               doi  \
+0       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+1       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+2       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+3       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+
+                                               titre  \
+0  A Systematic Framework for Addressing Critical...   
+1  Prioritizing DevOps Implementation Guidelines ...   
+2  A Systematic Framework for Addressing Critical...   
+3  Prioritizing DevOps Implementation Guidelines ...   
+
+                                          chercheurs  \
+0  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+1  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+2  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+3  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+
+                                        laboratoires  \
+0  Department of Computing, Riphah International ...   
+1                                     Non disponible   
+2  Department of Computing, Riphah International ...   
+3                                                      
+
+                                            abstract  \
+0  DevOps is the bundle of applications and cultu...   
+1  The DevOps paradigm is increasingly being adop...   
+2  DevOps is the bundle of applications and cultu...   
+3  The DevOps paradigm is increasingly being adop...   
+
+                                                ISSN  \
+0  {'Print ISSN': 'Non disponible', 'Electronic I...   
+1  {'Print ISSN': 'Non disponible', 'Electronic I...   
+2  {'Print ISSN': 'Non disponible', 'Electronic I...   
+3  {'Print ISSN': 'Non disponible', 'Electronic I...   
+
+                    quartile      pays  
+0  Journal pas indexé Scopus  Pakistan  
+1  Journal pas indexé Scopus      None  
+2  Journal pas indexé Scopus  Pakistan  
+3  Journal pas indexé Scopus      None  
+[2024-11-09T14:02:42.677+0000] {python.py:240} INFO - Done. Returned value was:                         _id                                  journal  \
+0  672f6a95c54617db64d7ae20  Published in: IEEE Access ( Volume: 11)   
+1  672f6a9bc54617db64d7ae21  Published in: IEEE Access ( Volume: 12)   
+2  672f6b610f70e73e0ad27221  Published in: IEEE Access ( Volume: 11)   
+3  672f6b670f70e73e0ad27222  Published in: IEEE Access ( Volume: 12)   
+
+  indexation      publication                               doi  \
+0       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+1       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+2       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2023.3325325   
+3       IEEE  Publisher: IEEE  DOI: 10.1109/ACCESS.2024.3402832   
+
+                                               titre  \
+0  A Systematic Framework for Addressing Critical...   
+1  Prioritizing DevOps Implementation Guidelines ...   
+2  A Systematic Framework for Addressing Critical...   
+3  Prioritizing DevOps Implementation Guidelines ...   
+
+                                          chercheurs  \
+0  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+1  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+2  Kausar-Nasreen Khattak; Faiza Qayyum; Syed She...   
+3  Muhammad Zohaib; Ahmed Alsanad; Areej Abdullah...   
+
+                                        laboratoires  \
+0  Department of Computing, Riphah International ...   
+1                                     Non disponible   
+2  Department of Computing, Riphah International ...   
+3                                                      
+
+                                            abstract  \
+0  DevOps is the bundle of applications and cultu...   
+1  The DevOps paradigm is increasingly being adop...   
+2  DevOps is the bundle of applications and cultu...   
+3  The DevOps paradigm is increasingly being adop...   
+
+                                                ISSN  \
+0  {'Print ISSN': 'Non disponible', 'Electronic I...   
+1  {'Print ISSN': 'Non disponible', 'Electronic I...   
+2  {'Print ISSN': 'Non disponible', 'Electronic I...   
+3  {'Print ISSN': 'Non disponible', 'Electronic I...   
+
+                    quartile      pays  
+0  Journal pas indexé Scopus  Pakistan  
+1  Journal pas indexé Scopus      None  
+2  Journal pas indexé Scopus  Pakistan  
+3  Journal pas indexé Scopus      None  
+[2024-11-09T14:02:42.812+0000] {xcom.py:690} ERROR - ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object'). If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2024-11-09T14:02:42.815+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3639, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 249, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 688, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 105, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 92, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 149, in serialize
+    data, serialized_classname, version, is_serialized = _serializers[qn].serialize(o)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 625, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 612, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 606, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 360, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object')
+[2024-11-09T14:02:42.838+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-11-09T14:02:42.838+0000] {logging_mixin.py:190} INFO - Task start:2024-11-09 14:02:38.080514+00:00 end:2024-11-09 14:02:42.837621+00:00 duration:4.757107
+[2024-11-09T14:02:42.839+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): fetch_data> dag:<DAG: mongodb_atlas_fetch_load_data> dagrun:<DagRun mongodb_atlas_fetch_load_data @ 2024-11-09 14:02:32.799063+00:00: manual__2024-11-09T14:02:32.799063+00:00, state:running, queued_at: 2024-11-09 14:02:32.854318+00:00. externally triggered: True>
+[2024-11-09T14:02:42.839+0000] {logging_mixin.py:190} INFO - Failure caused by ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object')
+[2024-11-09T14:02:42.840+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=mongodb_atlas_fetch_load_data, task_id=fetch_data, run_id=manual__2024-11-09T14:02:32.799063+00:00, execution_date=20241109T140232, start_date=20241109T140238, end_date=20241109T140242
+[2024-11-09T14:02:42.865+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-09T14:02:42.866+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 53 for task fetch_data (("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object'); 555)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 789, in _execute_task
+    task_instance.xcom_push(key=XCOM_RETURN_KEY, value=xcom_value, session=session_or_null)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3639, in xcom_push
+    XCom.set(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 249, in set
+    value = cls.serialize_value(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/xcom.py", line 688, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 105, in encode
+    return super().encode(o)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/json.py", line 92, in default
+    return serialize(o)
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serde.py", line 149, in serialize
+    data, serialized_classname, version, is_serialized = _serializers[qn].serialize(o)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/serialization/serializers/pandas.py", line 49, in serialize
+    table = pa.Table.from_pandas(o)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 625, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 612, in convert_column
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyarrow/pandas_compat.py", line 606, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/array.pxi", line 360, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert ObjectId('672f6a95c54617db64d7ae20') with type ObjectId: did not recognize Python value type when inferring an Arrow data type", 'Conversion failed for column _id with type object')
+[2024-11-09T14:02:42.919+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-09T14:02:42.972+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-09T14:02:42.979+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

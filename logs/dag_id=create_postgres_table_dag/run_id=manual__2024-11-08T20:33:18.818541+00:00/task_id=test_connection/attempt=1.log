@@ -1,0 +1,32 @@
+[2024-11-08T20:33:34.122+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-08T20:33:34.176+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_postgres_table_dag.test_connection manual__2024-11-08T20:33:18.818541+00:00 [queued]>
+[2024-11-08T20:33:34.199+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_postgres_table_dag.test_connection manual__2024-11-08T20:33:18.818541+00:00 [queued]>
+[2024-11-08T20:33:34.200+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-08T20:33:34.482+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): test_connection> on 2024-11-08 20:33:18.818541+00:00
+[2024-11-08T20:33:34.505+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=319) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-08T20:33:34.510+0000] {standard_task_runner.py:72} INFO - Started process 321 to run task
+[2024-11-08T20:33:34.512+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'create_postgres_table_dag', 'test_connection', 'manual__2024-11-08T20:33:18.818541+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpq1cfae11']
+[2024-11-08T20:33:34.515+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask test_connection
+[2024-11-08T20:33:34.652+0000] {task_command.py:467} INFO - Running <TaskInstance: create_postgres_table_dag.test_connection manual__2024-11-08T20:33:18.818541+00:00 [running]> on host fd25dca0c445
+[2024-11-08T20:33:34.888+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_postgres_table_dag' AIRFLOW_CTX_TASK_ID='test_connection' AIRFLOW_CTX_EXECUTION_DATE='2024-11-08T20:33:18.818541+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-08T20:33:18.818541+00:00'
+[2024-11-08T20:33:34.891+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-11-08T20:33:34.892+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-11-08T20:33:34.893+0000] {logging_mixin.py:190} INFO - Current task name:test_connection state:running start_date:2024-11-08 20:33:34.177546+00:00
+[2024-11-08T20:33:34.894+0000] {logging_mixin.py:190} INFO - Dag name:create_postgres_table_dag and current dag run status:running
+[2024-11-08T20:33:34.894+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-08T20:33:34.895+0000] {sql.py:278} INFO - Executing: SELECT 1;
+[2024-11-08T20:33:34.923+0000] {base.py:84} INFO - Retrieving connection 'acticls_connection'
+[2024-11-08T20:33:34.964+0000] {base.py:84} INFO - Retrieving connection 'acticls_connection'
+[2024-11-08T20:33:34.975+0000] {sql.py:544} INFO - Running statement: SELECT 1;, parameters: None
+[2024-11-08T20:33:34.977+0000] {sql.py:553} INFO - Rows affected: 1
+[2024-11-08T20:33:35.043+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-08T20:33:35.043+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=create_postgres_table_dag, task_id=test_connection, run_id=manual__2024-11-08T20:33:18.818541+00:00, execution_date=20241108T203318, start_date=20241108T203334, end_date=20241108T203335
+[2024-11-08T20:33:35.063+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-11-08T20:33:35.064+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-11-08T20:33:35.064+0000] {logging_mixin.py:190} INFO - Dag name:create_postgres_table_dag queued_at:2024-11-08 20:33:18.877616+00:00
+[2024-11-08T20:33:35.065+0000] {logging_mixin.py:190} INFO - Task hostname:fd25dca0c445 operator:PostgresOperator
+[2024-11-08T20:33:35.101+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-08T20:33:35.165+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-08T20:33:35.170+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
